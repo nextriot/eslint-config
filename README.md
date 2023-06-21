@@ -44,21 +44,43 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 2. Add to your root `.eslintrc.js` file:
     ```javascript
-    module.exports = {
+    const config = {
         root: true,
         env: {}, // env config is based on project scope eg is it only node or node+browser
+        settings: {
+            react: {
+                version: "detect"
+            }
+        },
         extends: [
-            '@mobile-reality/eslint-config/XXX', // base config based on project scope, XXX described below
+            '@nextriot/eslint-config/react-native', // base config based on project scope, XXX described below
             'plugin:prettier/recommended', // to include prettier rules in eslint
         ],
         // if jest is used jest config should be added to overrides section
         overrides: [
             {
                 files: ['test/**/*.test.ts'], // glob pattern has to match test files
-                extends: ['@mobile-reality/eslint-config/configs/jest'],
+                extends: ['@nextriot/eslint-config/configs/jest'],
             },
         ],
+        rules: {
+            'prettier/prettier': [
+                'warn',
+                {
+                    semi: false,
+                    singleQuote: true,
+                    arrowParens: 'avoid',
+                    bracketSpacing: true,
+                    printWidth: 120,
+                },
+            ],
+            'react/react-in-jsx-scope': 0,
+            'react/destructuring-assignment': 0,
+            'unicorn/filename-case': 0,
+        },
     };
+
+    module.exports = config;
     ```
     
     XXX is a preconfigured eslint config for MR projects. Supported configs with required peerDependencies (which must be installed in project):
@@ -70,7 +92,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 3. Install deps:
     ```javascript
-        yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native
+        yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn
     ```
 
 ## Installation and usage for an existing project
