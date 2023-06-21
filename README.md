@@ -30,7 +30,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 ## Installation and usage for a new project
 
-1. Install `@mobile-reality/eslint-config`, `eslint`, `prettier` and `eslint-plugin-prettier`:
+1. Install `nextriot/eslint-config`, `eslint`, `prettier` and `eslint-plugin-prettier`:
 
     ```sh
     yarn add -D @mobile-reality/eslint-config eslint@^8.37.0 prettier eslint-plugin-prettier
@@ -60,12 +60,18 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
         ],
     };
     ```
+    
     XXX is a preconfigured eslint config for MR projects. Supported configs with required peerDependencies (which must be installed in project):
     - node-javascript
     - node-typescript (@typescript-eslint/eslint-plugin@~5.31.0 @typescript-eslint/parser@~5.31.0)
     - react-javascript (eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort)
     - react-typescript (@typescript-eslint/eslint-plugin@~5.31.0 @typescript-eslint/parser@~5.31.0 eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort)
     - react-native (@typescript-eslint/eslint-plugin@~5.31.0 @typescript-eslint/parser@~5.31.0 eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native)
+
+3. Install deps:
+    ```javascript
+        yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native
+    ```
 
 ## Installation and usage for an existing project
 
