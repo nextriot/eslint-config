@@ -92,7 +92,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 3. Install deps:
     ```javascript
-        yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn
+    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn
     ```
 
 ## Installation and usage for an existing project
