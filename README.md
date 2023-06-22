@@ -33,13 +33,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 1. Install `nextriot/eslint-config`, `eslint`, `prettier` and `eslint-plugin-prettier`:
 
     ```sh
-    yarn add -D @mobile-reality/eslint-config eslint@^8.37.0 prettier eslint-plugin-prettier
-    ```
-
-    or
-
-    ```sh
-    npm i -D @mobile-reality/eslint-config eslint@^8.37.0 prettier eslint-plugin-prettier
+    yarn add -D @nextriot/eslint-config eslint prettier
     ```
 
 2. Add to your root `.eslintrc.js` file:
@@ -93,7 +87,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 3. Install deps:
     ```javascript
-    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn eslint-plugin-markdown
+    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn eslint-plugin-markdown eslint-plugin-prettier
     ```
 
 ## Installation and usage for an existing project
