@@ -33,7 +33,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 1. Install `nextriot/eslint-config`, `eslint`, `prettier` and `eslint-plugin-prettier`:
 
     ```sh
-    yarn add -D @nextriot/eslint-config eslint prettier
+    yarn add -D nextriot/eslint-config eslint prettier
     ```
 
 2. Add to your root `.eslintrc.js` file:
