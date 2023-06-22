@@ -55,6 +55,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
         extends: [
             '@nextriot/eslint-config/react-native', // base config based on project scope, XXX described below
             'plugin:prettier/recommended', // to include prettier rules in eslint
+            'plugin:markdown/recommended', // to include prettier rules in eslint
         ],
         // if jest is used jest config should be added to overrides section
         overrides: [
@@ -92,7 +93,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 3. Install deps:
     ```javascript
-    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn
+    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn eslint-plugin-markdown
     ```
 
 ## Installation and usage for an existing project
