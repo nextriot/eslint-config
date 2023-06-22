@@ -37,19 +37,26 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
     ```
 
 2. Add to your root `.eslintrc.js` file:
+
     ```javascript
     const config = {
         root: true,
         env: {}, // env config is based on project scope eg is it only node or node+browser
         settings: {
             react: {
-                version: "detect"
-            }
+                version: 'detect',
+            },
+            'import/resolver': {
+                typescript: {
+                    project: ['./tsconfig.json'],
+                },
+            },
         },
         extends: [
             '@nextriot/eslint-config/react-native', // base config based on project scope, XXX described below
             'plugin:prettier/recommended', // to include prettier rules in eslint
-            'plugin:markdown/recommended', // to include prettier rules in eslint
+            'plugin:markdown/recommended', // to include markdown rules in eslint
+            'plugin:import/recommended', // to include import rules in eslint
         ],
         // if jest is used jest config should be added to overrides section
         overrides: [
@@ -72,13 +79,16 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
             'react/react-in-jsx-scope': 0,
             'react/destructuring-assignment': 0,
             'unicorn/filename-case': 0,
+            'no-duplicate-imports': 0,
+            'import/no-duplicates': 1,
         },
     };
 
     module.exports = config;
     ```
-    
+
     XXX is a preconfigured eslint config for MR projects. Supported configs with required peerDependencies (which must be installed in project):
+
     - node-javascript
     - node-typescript (@typescript-eslint/eslint-plugin@~5.31.0 @typescript-eslint/parser@~5.31.0)
     - react-javascript (eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort)
@@ -87,7 +97,7 @@ ESLint's configuration of [Mobile Reality](https://themobilereality.com) team.
 
 3. Install deps:
     ```javascript
-    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn eslint-plugin-markdown eslint-plugin-prettier
+    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react  eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-react-native eslint-plugin-unicorn eslint-plugin-markdown eslint-plugin-prettier  eslint-plugin-import eslint-import-resolver-typescript
     ```
 
 ## Installation and usage for an existing project
